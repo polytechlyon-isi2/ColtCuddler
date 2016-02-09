@@ -1,0 +1,17 @@
+{
+    "name": "vendor/colt-cuddler",
+    "description": "A plush web store.",
+    "authors": [
+        {
+            "name": "siapran",
+            "email": "siapran.candoris@gmail.com"
+        },
+        {
+            "name": "bertrand",
+            "email": "axel.bertrand@etu.univ-lyon1.fr"
+        }
+    ],
+    "require": {
+        "silex/silex": "1.3.*"
+    }
+}
