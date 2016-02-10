@@ -10,32 +10,33 @@
 </title>
 </head>
 <body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"> ColtCuddler</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse-target">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Genres <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/genre/1">Poney</a></li>
+						</ul>
+					</li>
+				</ul>        
+				<ul class="nav navbar-nav navbar-right">
+					{% block userBar %}{% endblock %}
+				</ul>
+			</div>
+		</div><!-- /.container -->
+	</nav>
     <div class="container">
-        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/"> ColtCuddler</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-collapse-target">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Genres <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/genre/1">Poney</a></li>
-                            </ul>
-                        </li>
-                    </ul>        
-                    <ul class="nav navbar-nav navbar-right">
-                        {% block userBar %}{% endblock %}
-                    </ul>
-                </div>
-            </div><!-- /.container -->
-        </nav>
+        
         <div id="content">
             {% block content %}{% endblock %}
         </div>

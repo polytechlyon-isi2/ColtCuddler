@@ -1,14 +1,5 @@
-body {
-    /* Move body down so that fixed navbar won't overlay it */
-    padding-top: 60px; 
-}
-
-a:hover, a:focus {
-    text-decoration: none;
-}
-
-.nav-tabs {
-    margin-bottom: 20px;
+.navbar {
+	border-radius: 0px;
 }
 
 #imgHome, #imgAlbum {
