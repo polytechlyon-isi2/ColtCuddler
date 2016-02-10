@@ -1,0 +1,18 @@
+body {
+    /* Move body down so that fixed navbar won't overlay it */
+    padding-top: 60px; 
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.nav-tabs {
+    margin-bottom: 20px;
+}
+
+#imgHome, #imgAlbum {
+    border-radius: 7px; 
+    border:4px solid white; 
+    box-shadow: 1px 1px 10px #555;
+}
