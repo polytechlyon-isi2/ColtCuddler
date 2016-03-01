@@ -3,5 +3,6 @@
 
 // Home page
 $app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html.twig');
-})->bind('home');
+    $genders = $app['dao.gender']->findAll();
+    return $app['twig']->render('index.html.twig', array('genders' => $genders));
+  })->bind('home');

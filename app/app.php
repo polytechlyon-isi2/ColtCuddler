@@ -13,3 +13,9 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views',
 ));
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+
+
+// Register services
+$app['dao.gender'] = $app->share(function ($app) {
+    return new ColtCuddler\DAO\GenderDAO($app['db']);
+});
