@@ -4,7 +4,7 @@
 
 {% block genders %}
 	{% for gender in genders %}
-		<li><a href="/genre/{{ gender.gender_id }}">{{ gender.gender_name }}</a></li>
+		<li><a href="/genre/{{ gender.id }}">{{ gender.name }}</a></li>
 	{% endfor %}
 {% endblock %}
 

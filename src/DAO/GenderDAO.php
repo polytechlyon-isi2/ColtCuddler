@@ -15,8 +15,8 @@ class GenderDAO extends DAO
     // Convert query result to an array of domain objects
     $genders = array();
     foreach ($result as $row) {
-        $articleId = $row['gender_id'];
-        $articles[$articleId] = $this->buildDomainObject($row);;
+        $genderId = $row['gender_id'];
+        $genders[$genderId] = $this->buildDomainObject($row);;
     }
     return $genders;
   }
