@@ -2,9 +2,9 @@
 
 {% block title %}Accueil{% endblock %}
 
-{% block genders %}
-	{% for gender in genders %}
-		<li><a href="/genre/{{ gender.id }}">{{ gender.name }}</a></li>
+{% block categories %}
+	{% for category in categories %}
+		<li><a href="/category/{{ category.id }}">{{ category.name }}</a></li>
 	{% endfor %}
 {% endblock %}
 
@@ -13,7 +13,7 @@
 							<span class="glyphicon glyphicon-user"></span> Non connecté <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="/login">S'identifier</a></li>
+							<li><a href="http://coltcuddler/login">S'identifier</a></li>
 						</ul>
 					</li>{% endblock %}
 
@@ -21,7 +21,7 @@
 		<div class="jumbotron">
 			<div class="row">
 				<div class="col-md-6">
-					<img class="img-responsive" id="imgHome" src="images/accueil.jpg" />
+					<img class="img-responsive" id="imgHome" src="/images/accueil.jpg" />
 				</div>
 				<div class="col-md-6">
 					<h2>J'aime les peluches <br> <small>Petites, grosses, mignonne, horrible ou juste adorable, venez trouver votre nouvelle peluche sur ColtCuddler !</small></h2>

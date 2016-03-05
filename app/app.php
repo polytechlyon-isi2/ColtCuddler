@@ -16,6 +16,10 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 
 // Register services
-$app['dao.gender'] = $app->share(function ($app) {
-    return new ColtCuddler\DAO\GenderDAO($app['db']);
+$app['dao.category'] = $app->share(function ($app) {
+    return new ColtCuddler\DAO\CategoryDAO($app['db']);
+});
+
+$app['dao.plush'] = $app->share(function ($app) {
+    return new ColtCuddler\DAO\PlushDAO($app['db']);
 });

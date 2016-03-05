@@ -2,7 +2,7 @@
 
 namespace ColtCuddler\Domain;
 
-class Gender
+class Category
 {
   private $id;
   private $name;
