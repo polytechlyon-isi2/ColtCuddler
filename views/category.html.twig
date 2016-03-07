@@ -2,9 +2,9 @@
 
 {% block title %}Catégorie - TODO{% endblock %}
 
-{% block genders %}
-	{% for gender in genders %}
-		<li><a href="/genre/{{ gender.id }}">{{ gender.name }}</a></li>
+{% block categories %}
+	{% for category in categories %}
+		<li><a href="/category/{{ category.id }}">{{ category.name }}</a></li>
 	{% endfor %}
 {% endblock %}
 
