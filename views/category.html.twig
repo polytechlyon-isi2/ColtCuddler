@@ -1,6 +1,6 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}Catégorie - TODO{% endblock %}
+{% block title %}Catégorie - {{ category.name }}{% endblock %}
 
 {% block categories %}
 	{% for category in categories %}
@@ -18,6 +18,14 @@
 					</li>{% endblock %}
 
 {% block content %}
+	<div class="row">
+		<h1 class="text-center">{{ category.name }}</h1>
+	</div>
+	{% if plushies|length == 0 %}
+		<div class="row">
+			<h1 class="text-center">Cette catégorie ne contient aucune peluche</h1>
+		</div>
+	{% else %}
 		{% for plush in plushies %}
       <div class="row">
         <div class="col-md-2">
@@ -27,4 +35,5 @@
         </div>
       </di>
 		{% endfor %}
+	{% endif %}
 {% endblock %}

@@ -21,6 +21,15 @@ class CategoryDAO extends DAO
     return $categories;
   }
 
+  public function findFromId($id){
+    $sql = "select * from t_category where category_id=?;";
+    $row = $this->getDb()->fetchAssoc($sql, array($id));
+
+    if ($row)
+        return $this->buildDomainObject($row);
+    else
+        throw new \Exception("No category matching id " . $id);
+  }
 
   public function buildDomainObject($row){
     $category = new Category();
